@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple messages app</title>
+  </head>
+  <body>
+    <div class="main">
+      <form id="messageForm" method="post">
+        <label for="textColor">text color</label>
+        <input name="textColor" value="#ffffff" id="textColor" type="color" />
+
+        <label for="backgroundColor">background color</label>
+        <input name="backgroundColor" id="backgroundColor" type="color" />
+
+        <input
+          id="content"
+          autocomplete="off"
+          type="text"
+          name="content"
+          placeholder="content"
+        />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="result"></div>
+
+      <div class="messages"></div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

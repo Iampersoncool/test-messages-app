@@ -1,0 +1,46 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#messageForm {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.messages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 700px) {
+  #messageForm,
+  .messages {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.message {
+  text-align: center;
+  padding: 0.4rem;
+}
+
+.response {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.success {
+  background-color: lightgreen;
+}
+
+.error {
+  background-color: red;
+}
