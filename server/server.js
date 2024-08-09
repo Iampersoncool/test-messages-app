@@ -17,6 +17,8 @@ runMigrations()
 
 const app = express()
 
+const PORT = process.env.PORT ?? 3000
+
 const apiRouteLimiter = rateLimit({
   windowMs: 1000,
   limit: 1,
@@ -40,4 +42,4 @@ app
   .get(getMessages)
   .post(createMessageValidator(), validator(), createMessage)
 
-app.listen(3000, () => console.log('app listening on port 3000'))
+app.listen(PORT, () => console.log(`app listening on port ${PORT}`))
