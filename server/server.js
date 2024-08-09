@@ -27,7 +27,11 @@ const apiRouteLimiter = rateLimit({
   message: { errors: [{ field: 'rateLimit', message: 'Rate limit exceded.' }] },
 })
 
-app.use(cors())
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+  })
+)
 
 app.use(express.json())
 
